@@ -1,4 +1,4 @@
-FROM maven:3-jdk-8
+FROM maven:3-jdk-11
 ENV DB_HOST_IP="localhost"
 WORKDIR /usr/src/app
 COPY . ./
