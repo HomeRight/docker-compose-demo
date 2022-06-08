@@ -34,9 +34,9 @@ class UIComponent extends Component {
     this.props.addUser(this.state.name);
   };
 
-  removeUser = (event) => {
+  removeUser = (id) => {
     console.log("UIComponent.js - removeUser() called");
-    this.props.removeUser(this.state.id);
+    this.props.removeUser(id);
   };
 
   handleNameChange = (event) => {
@@ -71,7 +71,9 @@ class UIComponent extends Component {
                   <img className="myavatar" src={require("./avatar.jpg")} />
                   <button className="ui basic button">{user.name}</button>
                   <button className="ui basic button">{user.email}</button>
-                  <button onClick={this.removeUser}>Remove user</button>
+                  <button onClick={this.removeUser(user.id)}>
+                    Remove user
+                  </button>
                 </div>
               </div>
             </div>
