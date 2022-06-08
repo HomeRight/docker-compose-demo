@@ -35,7 +35,8 @@ class UIComponent extends Component {
   };
 
   removeUser = (id) => {
-    console.log("UIComponent.js - removeUser() called");
+    console.log(12312);
+    console.log("UIComponent.js - removeUser() called" + id);
     this.props.removeUser(id);
   };
 
@@ -71,8 +72,8 @@ class UIComponent extends Component {
                   <img className="myavatar" src={require("./avatar.jpg")} />
                   <button className="ui basic button">{user.name}</button>
                   <button className="ui basic button">{user.email}</button>
-                  <button onClick={this.removeUser(user.id)}>
-                    Remove user
+                  <button onClick={() => this.removeUser(user.id)}>
+                    Remove user {user.id}
                   </button>
                 </div>
               </div>
