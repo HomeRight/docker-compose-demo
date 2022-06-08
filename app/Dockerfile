@@ -1,5 +1,5 @@
-FROM maven:3-jdk-8
-ENV DB_HOST_IP="localhost"
+FROM maven:3-jdk-11
+ENV DB_HOST_IP="107.167.179.137"
 WORKDIR /usr/src/app
 COPY . ./
 COPY wait-for-it.sh ./wait-for-it.sh
